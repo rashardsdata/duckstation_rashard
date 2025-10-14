@@ -1689,7 +1689,7 @@ bool D3D12Device::CreateRootSignatures(Error* error)
         rsb.AddDescriptorTable(D3D12_DESCRIPTOR_RANGE_TYPE_UAV, 0, MAX_IMAGE_RENDER_TARGETS,
                                D3D12_SHADER_VISIBILITY_PIXEL);
       }
-      rsb.Add32BitConstants(0, UNIFORM_PUSH_CONSTANTS_SIZE / sizeof(u32), D3D12_SHADER_VISIBILITY_ALL);
+      rsb.Add32BitConstants(1, UNIFORM_PUSH_CONSTANTS_SIZE / sizeof(u32), D3D12_SHADER_VISIBILITY_ALL);
       if (!(rs = rsb.Create(error, true)))
         return false;
       D3D12::SetObjectName(rs.Get(), "Single Texture Pipeline Layout");
@@ -1705,7 +1705,7 @@ bool D3D12Device::CreateRootSignatures(Error* error)
         rsb.AddDescriptorTable(D3D12_DESCRIPTOR_RANGE_TYPE_UAV, 0, MAX_IMAGE_RENDER_TARGETS,
                                D3D12_SHADER_VISIBILITY_PIXEL);
       }
-      rsb.Add32BitConstants(0, UNIFORM_PUSH_CONSTANTS_SIZE / sizeof(u32), D3D12_SHADER_VISIBILITY_ALL);
+      rsb.Add32BitConstants(1, UNIFORM_PUSH_CONSTANTS_SIZE / sizeof(u32), D3D12_SHADER_VISIBILITY_ALL);
       if (!(rs = rsb.Create(error, true)))
         return false;
       D3D12::SetObjectName(rs.Get(), "Single Texture Buffer + UBO Pipeline Layout");
@@ -1741,7 +1741,7 @@ bool D3D12Device::CreateRootSignatures(Error* error)
         rsb.AddDescriptorTable(D3D12_DESCRIPTOR_RANGE_TYPE_UAV, 0, MAX_IMAGE_RENDER_TARGETS,
                                D3D12_SHADER_VISIBILITY_PIXEL);
       }
-      rsb.Add32BitConstants(0, UNIFORM_PUSH_CONSTANTS_SIZE / sizeof(u32), D3D12_SHADER_VISIBILITY_ALL);
+      rsb.Add32BitConstants(1, UNIFORM_PUSH_CONSTANTS_SIZE / sizeof(u32), D3D12_SHADER_VISIBILITY_ALL);
       if (!(rs = rsb.Create(error, true)))
         return false;
       D3D12::SetObjectName(rs.Get(), "Multi Texture Pipeline Layout");
