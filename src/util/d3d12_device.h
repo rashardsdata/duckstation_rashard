@@ -281,7 +281,6 @@ private:
   void SetScissor(ID3D12GraphicsCommandList4* cmdlist);
 
   /// Applies any changed state.
-  ID3D12RootSignature* GetCurrentRootSignature() const;
   void SetInitialPipelineState();
   void PreDrawCheck();
   void PreDispatchCheck();
